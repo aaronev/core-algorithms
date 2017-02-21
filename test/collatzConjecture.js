@@ -16,6 +16,7 @@ describe('collatzConjecture()', function() {
     expect(collatzConjecture(1)).to.be.an('array')
     expect(collatzConjecture(1)).to.deep.equal([1])
   })
+  
   it('returns collatzConjecture sequence of a given number', function() {
     expect(collatzConjecture(3)).to.be.an('array')
     expect(collatzConjecture(3)).to.be.deep.equal([10, 5, 16, 8, 4, 2, 1])

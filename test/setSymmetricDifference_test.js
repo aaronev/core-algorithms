@@ -1,6 +1,5 @@
 import { expect } from 'chai'
 import setSymmetricDifference from '../src/setSymmetricDifference'
-import setIntersection from "../src/setIntersection"
 
 describe('setSymmetricDifference()', function() {
 

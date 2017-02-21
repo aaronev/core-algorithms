@@ -17,5 +17,6 @@ describe('setIntersection()', function() {
     const a = [1, 2, 4]
     const b = [2, 4, 6, 8]
     expect(setIntersection(a, b)).to.deep.equal([2, 4])
+
   })
 })

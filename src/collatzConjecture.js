@@ -17,6 +17,5 @@ export default function collatzConjecture(num) {
       a[counter++] = num
     }
     collatzConjecture(num)
+    return a
   }
-  return a
-}
