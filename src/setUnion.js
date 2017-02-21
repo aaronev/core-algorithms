@@ -1,28 +1,16 @@
-export default function setUnion(a, b) {
-  if (a === null) {
-    return b
-  }
-  if (b === null) {
-    return a
-  }
-  if (a.length < b.length) {
-    let max = b.length
-  }
-  else {
-    let max = a.length
-  }
-  for (let i = 0; i < max; i++) {
-    if (a[i] === forEach(b)) {
-      return a[i]
+export default function setUnion(arr1, arr2) {
+  if (arr2 == null) return arr1
+  let difSet = [], newSet = [], counter = 0
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === arr2[counter]) {
+      difSet[counter] = arr1[i]
+      counter++
+    }
+    else {
+      newSet[counter] = arr1[i]
+      newSet[counter + 2] = arr2[i]
+      counter++
     }
   }
-    if (!a[i] === forEach(b)) {
-      let a = a[i]
-      return a
-    }
-    if (!b[i] === forEach(a)) {
-      let b = b[i]
-      return b
-    }
-  return [a[i] + a + b]
+  return newSet
 }

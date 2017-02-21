@@ -1,12 +1,10 @@
-export default function binarySearch(numbers, n) {
+export default function binarySearch (numbers, num){
   for (let i = 0; i < numbers.length; i++) {
-    if (n === numbers[i]) {
-      return i
+    if (num === numbers[i]) {
     }
   }
   for (let i = 0; i < numbers.length; i++) {
-      if (n !== numbers[i]) {
-        return 'Not Found'
+      if (num !== numbers[i]) {
     }
   }
 }

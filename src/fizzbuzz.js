@@ -1,14 +1,14 @@
-export default function fizzBuzz(n) {
-  for (let i = 0; i < n.length; i++) {
-    if (n[i] % 3 === 0){
-      return fizz
+export default function fizzBuzz(num) {
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] % 15 === 0) {
+      num[i] = 'FizzBuzz'
     }
-    if (n[i] % 5 === 0) {
-      return buzz
+    else if (num[i] % 5 === 0) {
+      num[i] = 'Buzz'
     }
-    if (n[i] % 15 === 0) {
-      return fizzbuzz
+    else if (num[i] % 3 === 0) {
+      num[i] = 'Fizz'
     }
-    return [n]
   }
+  return num
 }

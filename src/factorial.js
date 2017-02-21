@@ -1,9 +1,9 @@
-export default function factorial(n) {
-  if (n === 0) {
+export default function factorial(num) {
+  if (num === 0) {
     return 1
   }
-  for (let i = (n - 1); i >= 1; i--) {
-    n *= i
+  for (let i = (num - 1); i >= 1; i--) {
+    num *= i
   }
-  return n
+  return num
 }

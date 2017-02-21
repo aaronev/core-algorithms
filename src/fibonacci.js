@@ -1,12 +1,10 @@
-export default function fibonacci(n) {
-  if (n === 1)
-  {
+export default function fibonacci(num) {
+  if (num === 1) {
    return [0, 1];
   }
- else
-  {
-   var s = fibonacci(n - 1);
-   s.push(s[s.length - 1] + s[s.length - 2]);
-   return s;
+ else {
+   let fib = fibonacci(num - 1);
+   fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+   return fib;
   }
 }

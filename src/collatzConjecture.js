@@ -1,20 +1,21 @@
-export default function collatzConjecture(n) {
+export default function collatzConjecture(num) {
   let a = []
-  if (n === 0) {
-    a.push(n)
+  let counter = 0
+  if (num === 0) {
+    return [num]
   }
-  while (n >= 1) {
-    if (n === 1) {
-      a.push(n)
-    }
-    if(n % 2 == 0) {
-      let n = n / 2
-      a.push(n)
+  if (num === 1) {
+    a[counter++] = num
+  }
+  while (num > 1) {
+    if (num % 2 === 0) {
+      num /= 2
+      a[counter++] = num
     }
     else {
-      let n = (3 * n) + 1
-      a.push(n)
+      num = (3 * num) + 1
+      a[counter++] = num
     }
+    collatzConjecture(num)
+    return a
   }
-  return a
-}

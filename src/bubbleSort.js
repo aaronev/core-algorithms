@@ -1,21 +1,9 @@
 export default function bubbleSort(numbers) {
-  let n = []
-  let sorted = true
-  for (let i = 0; i < numbers.length; i++) {
-    let a = numbers[i]
-    for (let j = 1; j < numbers.length; j++) {
-      if (a < numbers[j]) {
-        sorted = false
-        n.push(a)
-        let b = numbers.indexOf(a);
-        if(b != -1) {
-	         numbers.splice(b, 1);
-        }
+    for (let i = 0, j = 1; i < numbers.length; i++, j++) {
+      while (numbers[i] > numbers[j]) {
+        numbers[j] = [numbers[i], numbers[i] = numbers[j]][0]
+        bubbleSort(numbers)
       }
     }
-    if(sorted === false){
-      bubbleSort(numbers)
-    }
-  return n
+    return numbers
   }
-}

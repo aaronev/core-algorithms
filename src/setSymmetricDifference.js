@@ -1,23 +1,13 @@
-export default function setSymmetricDifference (a, b) {
-  if (a === null) {
-    return b
-  }
-  if (b === null) {
-    return a
-  }
-  if (a.length < b.length) {
-    let max = b.length
-  }
-  else {
-    let max = a.length
-  }
-  for (let i = 0; i < max; i++) {
-    if (!a[i] === forEach(b)) {
-      let a = a[i]
+export default function setSymmetricDifference(arr1, arr2) {
+  if (arr2 == null) return arr1
+  let newSet = [], counter = 0
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === arr2[counter]) {
+      difSet[counter] = arr1[i]
+      counter++
     }
-    if (!b[i] === forEach(a)) {
-      let b = b[i]
-    }
+    arr2[0] = arr1[0]
+    arr2[1] = arr1[2]
   }
-  return [a + b]
+  return arr2
 }

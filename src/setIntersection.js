@@ -1,23 +1,12 @@
-export default function setIntersection(a, b) {
-  if (a === null) {
-    return b
-  }
-  else if (b === null) {
-    return a
-  }
-  else if (a.length < b.length) {
-    let max = b.length
-    for (let i = 0; i < max; i++) {
-      if (a[i] === forEach(b)) {
-        return a = a[i]
-      }
-      else {
-        let max = a.length
-        if (b[i] === forEach(a)) {
-          return b = b[i]
-        }
-      }
+export default function setIntersection(arr1, arr2) {
+  let difSet = []
+  let counter = 0
+  if (arr2 == null) return arr1
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === arr2[counter]) {
+      difSet[counter] = arr1[i]
+      counter++
     }
-  return (a + b)
   }
+  return difSet
 }

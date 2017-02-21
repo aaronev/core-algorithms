@@ -1,13 +1,11 @@
-export default function setComplement([a], [b]) {
-  if (a === null) {
-    return b
-  }
-  if (b === null) {
-    return a
-  }
-  for (let i = 0; i < b.length; i++) {
-    if (b[i] !== a[i + 1]) {
-      return [b[i]]
+export default function setComplement(arr1, arr2) {
+  if (arr2 == null) return arr1
+  let simSet = [], comSet = [], counter = 0
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2[counter] === arr1[i]) {
+      simSet[counter] = arr2[counter]
+      counter++
     }
   }
+  return arr2.splice(simSet[0], simSet[1])
 }
