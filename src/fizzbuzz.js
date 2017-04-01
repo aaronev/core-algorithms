@@ -10,5 +10,5 @@ export default function fizzBuzz(num) {
       num[i] = 'Fizz'
     }
   }
-  return num
-}
+  return num 
+} 

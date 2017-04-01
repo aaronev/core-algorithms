@@ -19,3 +19,4 @@ export default function collatzConjecture(num) {
     collatzConjecture(num)
     return a
   }
+}
