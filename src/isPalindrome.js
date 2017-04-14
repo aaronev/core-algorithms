@@ -1,12 +1,6 @@
 export default function isPalindrome(str) {
-  let revStr = '', counter = 1
-  for (let i = str.length - 1; i >= 0; i--) {
-    revStr += str[i]
-  }
-  if (str === revStr) {
-    return true
-  }
-  else {
-    return false
-  }
+  let string = str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  let revStr = string.split("").reverse().join("");
+  if (string === revStr) return true
+  else return false
 }

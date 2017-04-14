@@ -1,10 +1,9 @@
 export default function fibonacci(num) {
-  if (num === 1) {
-   return [0, 1];
+  let arr = [0, 1]
+  while (num > 2) {
+    let len = arr.length
+    arr.push(arr[len - 2] + arr[len - 1])
+    fibonacci(num -= 1)
   }
- else {
-   let fib = fibonacci(num - 1);
-   fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
-   return fib;
-  }
+  return arr
 }

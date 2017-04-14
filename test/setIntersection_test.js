@@ -7,7 +7,7 @@ describe('setIntersection()', function() {
     expect(setIntersection).to.be.a('function')
   })
 
-  it('returns the intersection of two sets', function() {
+  it('returns the intersection of two sets with same lengths', function() {
     const a = [1, 2, 3, 4]
     const b = [2, 4, 6, 8]
     expect(setIntersection(a, b)).to.deep.equal([2, 4])
@@ -18,5 +18,11 @@ describe('setIntersection()', function() {
     const b = [2, 4, 6, 8]
     expect(setIntersection(a, b)).to.deep.equal([2, 4])
 
+  })
+
+   it('returns all intersections of two sets', function() {
+    const a = [2, 3, 4, 6, 10, 11]
+    const b = [2, 4, 6, 8, 10, 12]
+    expect(setIntersection(a, b)).to.deep.equal([2, 4, 6, 10])
   })
 })

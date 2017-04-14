@@ -1,22 +1,16 @@
 export default function collatzConjecture(num) {
-  let a = []
-  let counter = 0
-  if (num === 0) {
-    return [num]
-  }
-  if (num === 1) {
-    a[counter++] = num
-  }
+  let array = [num]
   while (num > 1) {
     if (num % 2 === 0) {
-      num /= 2
-      a[counter++] = num
-    }
+      array.push(num /= 2)
+      collatzConjecture(num)
+    } 
     else {
-      num = (3 * num) + 1
-      a[counter++] = num
+      num *= 3 
+      num += 1
+      array.push(num)
+      collatzConjecture(num)
     }
-    collatzConjecture(num)
-    return a
   }
+  return array
 }

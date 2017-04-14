@@ -1,15 +1,15 @@
-// import { expect } from 'chai'
-// import bubbleSort from '../src/bubbleSort'
-//
-// describe('bubbleSort()', function() {
-//
-//   it('should be a function', function() {
-//      expect(bubbleSort).to.be.a('function')
-//   })
-//
-//   it('returns an array of numbers from min to max', function() {
-//     const numbers = [1, 3, 4, 10, 24, 2, 5, 11]
-//     expect(bubbleSort(numbers)).to.be.an('array')
-//     expect(bubbleSort(numbers)).to.be.deep.equal([1, 2, 3, 4, 5, 10, 11, 24])
-//   })
-// })
+import { expect } from "chai"
+import bubbleSort from "../src/bubbleSort"
+
+describe ("bubbleSort", function() {
+
+  it("should sort an array using the bubble sort algorithm", function(){
+    const output = bubbleSort([10, 2, 7, 5, 3, 6, 1])
+    expect(output).to.deep.equal([1, 2, 3, 5, 6, 7, 10])
+  })
+
+  it("should sort an array using the bubble sort algorithm", function(){
+    const output = bubbleSort([10, 2, 7, 5, 8, 3, 6, 1, 4, 9])
+    expect(output).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  })
+})
