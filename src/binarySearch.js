@@ -1,17 +1,10 @@
 export default function binarySearch(array, query) {
-  let newArr = array.splice(0,0)
-  function searchTree(arr, num) {
-    let left = arr.splice(0, arr.length/2)
-    let right = arr
-    if (num < left[left.length - 1]) {
-      searchTree(left, num)
-    }
-    else if (num > right[0]) {
-      searchTree(right, num)
-    }
-    else return num
-  }
-  return array.indexOf(searchTree(newArr, query))
+  let newArr = array.slice(0,0)
+  let left = newArr.splice(0, newArr.length/2)
+  let right = newArr 
+  let len = left[left.length - 1]
+  let findingInLeft = query < len ? binarySearch(left, query) : query
+  let findingInRight = query > right[0] ? binarySearch(right, query) : query
+  let found = findingInLeft || findingInRight
+  return array.indexOf(found) 
 }
-
-//testing
