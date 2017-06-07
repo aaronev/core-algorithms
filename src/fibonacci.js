@@ -6,4 +6,4 @@ export default function fibonacci(num) {
     fibonacci(num -= 1)
   }
   return arr
-}
+} 

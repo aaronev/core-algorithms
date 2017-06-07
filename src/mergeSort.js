@@ -20,7 +20,6 @@ export default function mergeSort(array) {
   //console.log(sortLeft(leftSide), sortRight(rightSide))
 }
 
-
 // let leftSide = array.slice(0, (array.length / 2))
 //   let rightSide = array.slice((array.length / 2), array.length)
 //   let divideSort = (arr) => {
