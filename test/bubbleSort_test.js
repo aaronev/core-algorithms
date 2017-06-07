@@ -1,7 +1,7 @@
 import { expect } from "chai"
 import bubbleSort from "../src/bubbleSort"
 
-describe ("bubbleSort", function() {
+describe("bubbleSort", function() {
 
   it("should sort an array using the bubble sort algorithm", function(){
     const output = bubbleSort([10, 2, 7, 5, 3, 6, 1])
