@@ -3,6 +3,8 @@
   "description": "Tests and implementations for algorithms commonly used in job interviews.",
   "private": false,
   "version": "0.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/aaronev/core-algorithms.git",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-env": "^1.1.4",
