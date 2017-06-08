@@ -25,7 +25,7 @@ describe('isConnectedGraph()', function() {
 
   it('should return an error when anything but an object is given', function() {
     const output = "str"
-    expect(isConnectedGraph(output)).to.equal("error")
+    expect(isConnectedGraph(output)).to.equal(false)
   })
 
 })
